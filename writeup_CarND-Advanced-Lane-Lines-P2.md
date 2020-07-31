@@ -115,7 +115,7 @@ Vehicle Bias:  0.0370
 
 The code for this step is in the seventh section of the IPython notebook "P2.ipynb". 
 
-Function overlay() takes the lists of pixels that fit the left-side and right-side curvature lines, plots them back on the undistorted images and prints the curvatures and vehicle bias. Here is an example of my results on a test image:
+Function overlay() takes the lists of pixels that fit the left-side and right-side curvature lines, plots them back on the undistorted images and prints the curvatures and vehicle bias. Here is an example of my results on a test image. Although I can't get the curvature information to display on the correct image.
 <img src="./output_images/overlay_00.jpg" width=40% height=40%>
 <img src="./output_images/overlay_01.jpg" width=40% height=40%>
 
@@ -140,7 +140,7 @@ Quite a few!!! Here's where I got stuck.
 (7) Getting the curvatures and overlays to display on the correct test_images; I had a number of isssues with lists getting out of order. Getting the pipeline function to run through all the main functions top to bottom in order.
 (8) Processing the video; does not seem to work on my local Jupyter/Conda install
 
-After 4 or 5 days trying to get my own code running, I reference/re-used a lot of the code here:
+After 4 or 5 days trying to get my own code running up to item 3, I then reference/re-used a lot of the code here:
 
 https://github.com/waterwheel31/SD_advanced_lane_finding/blob/master/Advanced_Lane_Line_Detection.ipynb
 
