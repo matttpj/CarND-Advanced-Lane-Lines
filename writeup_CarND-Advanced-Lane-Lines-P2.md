@@ -87,7 +87,7 @@ This resulted in the following source and destination points:
 | 200, 720      | 450, 720      |
 
 
-<img src="./output_images/undistort_07+poly.jpg" width=40% height=40%>
+<img src="./output_images/poly_undistort_07.jpg" width=40% height=40%>
 <img src="./output_images/persp_07.jpg" width=40% height=40%>
 
 #### 5. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
@@ -99,7 +99,7 @@ Mid-points of left and right side of the image are marked as starting points the
 The lists of left-side and right-side pixels are then passed to the polyfit() function to identify best fit polynomial function.
 Then left-side pixels are painted red and right-side painted blue and best-fit polynomial line is drawn across the images.
 
-<img src="./output_images/warped+lanes_00.jpg.jpg" width=40% height=40%>
+<img src="./output_images/warped+lanes_00.jpg" width=40% height=40%>
 <img src="./output_images/warped+lanes_01.jpg" width=40% height=40%>
 
 #### 6. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
@@ -111,15 +111,12 @@ output_images/warped_00.jpg
 Left:  9072.60 m   Right:  13933.05 m
 Vehicle Bias:  0.0370 
 
-<img src="./output_images/warped+lanes_00.jpg" width=40% height=40%>
-<img src="./output_images/warped+lanes_01.jpg" width=40% height=40%>
-
 #### 7. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 The code for this step is in the seventh section of the IPython notebook "P2.ipynb". 
 
 Function overlay() takes the lists of pixels that fit the left-side and right-side curvature lines, plots them back on the undistorted images and prints the curvatures and vehicle bias. Here is an example of my results on a test image:
-<img src="./output_images/overlay_00.jpg.jpg" width=40% height=40%>
+<img src="./output_images/overlay_00.jpg" width=40% height=40%>
 <img src="./output_images/overlay_01.jpg" width=40% height=40%>
 
 ---
