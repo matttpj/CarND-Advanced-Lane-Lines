@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 def detect_lane_lines(image, last_lanes=None):
     if(last_lanes is None):
-        return full_detect_lane_lines(image )
+        return full_detect_lane_lines(image)
     else:
         return quick_detect_lane_lines(image, last_lanes)
 
@@ -38,7 +38,11 @@ def quick_detect_lane_lines(image, last_lanes):
     left = Lane(left_x, left_y)
     right = Lane(right_x, right_y)
 
-    return Lanes(left, right), image
+    lane_image = np.dstack((image, image, image))
+    lane_image[left_y, left_x] = [255,0,0] # red
+    lane_image[right_y, right_x] = [0,0,255] # blue
+
+    return Lanes(left, right), image, lane_image
 
 def full_detect_lane_lines(image):
     # Settings
@@ -87,8 +91,8 @@ def full_detect_lane_lines(image):
         window_right_x_high = current_right_x + window_margin
 
         # Draw the windows on the visualization image
-        cv2.rectangle(out_image, (window_left_x_low, window_y_low), (window_left_x_high, window_y_high), (0, 255, 0), 2)
-        cv2.rectangle(out_image, (window_right_x_low, window_y_low), (window_right_x_high, window_y_high), (0, 255, 0), 2)
+        cv2.rectangle(out_image, (window_left_x_low, window_y_low), (window_left_x_high, window_y_high), (0, 255, 0), 4)
+        cv2.rectangle(out_image, (window_right_x_low, window_y_low), (window_right_x_high, window_y_high), (0, 255, 0), 4)
 
         # Identify the non-zero points within the window
         good_left_indices = ((nonzero_y >= window_y_low) &
@@ -115,14 +119,18 @@ def full_detect_lane_lines(image):
     left_lane_indices = np.concatenate(left_lane_indices)
     right_lane_indices = np.concatenate(right_lane_indices)
 
-    # Extract the land right lane pixels
+    # Extract the left and right lane pixels
     left_x, left_y = nonzero_x[left_lane_indices], nonzero_y[left_lane_indices]
     right_x, right_y = nonzero_x[right_lane_indices], nonzero_y[right_lane_indices]
 
     left = Lane(left_x, left_y)
     right = Lane(right_x, right_y)
 
-    return Lanes(left, right), out_image
+    lane_image = np.dstack((image, image, image))
+    lane_image[left_y, left_x] = [255,0,0] # red
+    lane_image[right_y, right_x] = [0,0,255] # blue
+
+    return Lanes(left, right), out_image, lane_image
 
 if __name__ == "__main__":
     birdseye = BirdsEyeView()
@@ -134,4 +142,4 @@ if __name__ == "__main__":
     image = birdseye.transform_to_birdseye(image)
     image, gb = combined_thresholds.pipeline(image)
 
-    lanes, out_image = detect_lane_lines(image)
+    lanes, out_image, lane_image = detect_lane_lines(image)

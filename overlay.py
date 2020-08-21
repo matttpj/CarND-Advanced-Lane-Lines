@@ -68,7 +68,7 @@ if __name__ == "__main__":
     overlay = OverlayDetectedLaneData(birdseye=birdseye)
 
     # images_glob = glob.glob("images/test/*.jpg")
-    images_glob = glob.glob("./test_images/straight_lines1.jpg")
+    images_glob = glob.glob("./test_images/test1.jpg")
 
     for filepath in images_glob:
         image = rgb_image(filepath)

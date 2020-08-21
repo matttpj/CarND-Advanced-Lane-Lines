@@ -1,6 +1,5 @@
 from distortion import Distortion
 from image_helper import rgb_to_gray, rgb_to_hls, rgb_image
-from birdseye import BirdsEyeView
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -106,7 +105,7 @@ def pipeline(img):
     Y_THRESH = (70,100)
     #MAG_THRESH = (70,100)
     #DIR_THRESH = (0.7,1.0)
-    SAT_THRESH = (120,255)
+    SAT_THRESH = (110,255)
     RED_THRESH = (180,255)
 
     # Apply each of the thresholding functions
@@ -122,23 +121,20 @@ def pipeline(img):
 
     combined = np.zeros_like(gradx)
     #combined[((red == 1) | (saturation == 1)) | (dir == 1) | (mag == 1) | (grady == 1) | (gradx == 1)] = 1
-    combined[(red == 1) | (saturation == 1) | (grady == 1) | (gradx == 1)] = 1
+    combined[(red == 1) | (saturation == 1) |  (grady == 1) | (gradx == 1)] = 1
 
 
     return combined, gb_gradx_saturation
 
 if __name__ == "__main__":
-    birdseye = BirdsEyeView()
     distortion = Distortion(calibration_data_filepath="./camera_cal/wide_dist_pickle.p")
 
-    filepath = "./test_images/test5.jpg"
+    filepath = "./test_images/test1.jpg"
     image = rgb_image(filepath)
     image = distortion.undistort(image)
-    birdseye = birdseye.transform_to_birdseye(image)
-    image, gb = combined_thresholds.pipeline(birdseye)
+    image, gb = combined_thresholds.pipeline(image)
 
     image_color = (np.dstack((image, image, image))*[0, 255, 0]).astype(np.uint8)
-    print(image_color.dtype, birdseye.dtype)
-    new_image = cv2.addWeighted(birdseye, 1, image_color, 1, 0)
+    print(image_color.dtype)
     plt.imshow(image_color)
     plt.show()

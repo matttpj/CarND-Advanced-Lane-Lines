@@ -26,7 +26,7 @@ class Pipeline:
         bin_image = self.birdseye.transform_to_birdseye(bin_image)
         bin_image, gb = combined_thresholds.pipeline(bin_image)
 
-        lanes, _ = detect_lane_lines(bin_image, self.last_lanes)
+        lanes, _ , _ = detect_lane_lines(bin_image, self.last_lanes)
         self.lanes_average.update(lanes)
 
         if self.last_lanes is None:
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     np.seterr(all='ignore')
     pipeline = Pipeline()
 
-    # images_glob = glob.glob("images/test/*.jpg")
+    # images_glob = glob.glob("./test_images/test/*.jpg")
     images_glob = glob.glob("./test_images/test3.jpg")
 
     for filepath in images_glob:
