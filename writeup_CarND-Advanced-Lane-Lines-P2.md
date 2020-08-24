@@ -106,7 +106,7 @@ The following source and destination points were used to feed the transform meth
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
 <br/>
 *A full set of birds-eye perspective transformed images are available here:* 
-**./output_images/birdseye_threshold_.jpg**
+**./output_images/birdseye_threshold_*.jpg**
 <br/>
 
 #### 5. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
@@ -127,7 +127,6 @@ Then left-side pixels are painted red and right-side painted blue and best-fit p
 *A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and also available here:* 
 **./output_images/lanes_*.jpg**
 <br/>
-
 
 #### 6. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
