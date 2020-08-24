@@ -54,7 +54,7 @@ Output `objpoints` and `imgpoints` are used to compute the camera calibration an
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted camera calibration images are available here:* __./camera_cal/undistort*.jpg__
+*A full set of undistorted camera calibration images are available here:* **./camera_cal/undistort*.jpg**
 <br/>
 
 
@@ -84,7 +84,7 @@ A combination of gradient threshold and color threshold functions were applied t
 <img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
 *A full set of threshold transformed test_images are available here:* 
-__./output_images/threshold_*.jpg__ 
+**./output_images/threshold_*.jpg**
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
@@ -106,7 +106,7 @@ The following source and destination points were used to feed the transform meth
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
 <br/>
 *A full set of birds-eye perspective transformed images are available here:* 
-__./output_images/birdseye_threshold_.jpg__
+**./output_images/birdseye_threshold_.jpg**
 <br/>
 
 #### 5. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
@@ -119,11 +119,11 @@ Mid-points of the left and right sides of the image are marked as starting point
 The lists of left-side and right-side pixels are then passed to the polyfit() function to identify best fit polynomial function.
 Then left-side pixels are painted red and right-side painted blue and best-fit polynomial line is drawn in yellow across the images.
 <br/>
-<img src="./output_images/windows_00.jpg" width=40% height=40%>
-<img src="./output_images/lanes_00.jpg" width=40% height=40%>
+<img src="./output_images/windows_00.jpg" width=35% height=35%>
+<img src="./output_images/lanes_00.jpg" width=35% height=35%>
 <br/>
 *A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and also available here:* 
-__./output_images/lanes_*.jpg__
+**./output_images/lanes_*.jpg**
 <br/>
 
 
