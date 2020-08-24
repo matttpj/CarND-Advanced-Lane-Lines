@@ -15,10 +15,9 @@ The goals / steps of this project are the following:
   4. Apply a perspective transform to rectify binary image ("birds-eye view").
   5. Detect lane pixels and fit to find the lane boundary.
   6. Determine the curvature of the lane and vehicle position with respect to center.
-  7. Warp the detected lane boundaries back onto the original image.
-  8. Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
-  9. Run project videos of a car driving down the freeway through the image processing pipeline.
- 10. Discuss challenging aspects of the project.
+  7. Warp the detected lane boundaries back onto the original image and show estimation of lane curvature and vehicle position.
+  8. Run project videos of a car driving down the freeway through the image processing pipeline.
+  9. Discuss challenging aspects of the project.
 
 ## Image References
 
@@ -29,10 +28,9 @@ The goals / steps of this project are the following:
 |<img src="./output_images/threshold_07.jpg"> |<img src=./output_images/birdseye_threshold_07.jpg> |
 |5. Lane pixels and line of best fit identified |6. Lane curvature and vehicle offset calculated |
 |<img src="./output_images/lanes_07.jpg"> |<img src="./output_images/overlay_07.jpg"> |
-|7. Lane boundaries overlayed |8. Lane curvature and vehicle offset position overlayed|
-|<img src="./output_images/final_00.jpg"> |<img src="./output_images/final_07.jpg"> |
-|9. Project video processed | |
-|<img src="./output_videos/ALL_project_video.jpg"> ||
+|7. Lane boundaries, curvature and vehicle offset overlayed |8. Project video processed |
+|<img src="./output_images/final_00.jpg"> |<img src="./output_videos/ALL_project_video.jpg"> |
+
 
 
 ## [Rubric Points](https://review.udacity.com/#!/rubrics/571/view)
@@ -130,15 +128,11 @@ Function overlay() takes the lists of pixels that fit the left-side and right-si
 <img src="./output_images/overlay_00.jpg.jpg" width=40% height=40%>
 <img src="./output_images/overlay_01.jpg" width=40% height=40%>
 
-#### 8. Show sequences of images getting successfully processed by the pipeline
-
-The code for this step is in the eighth section of the IPython notebook "P2.ipynb". 
-
 ---
 
 ### Pipeline (video)
 
-#### 9. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+#### 8. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 The code for this step is in the eighth section of the IPython notebook "P2.ipynb". 
 Here's a [link to my video result](./project_video.mp4)
@@ -147,7 +141,7 @@ Here's a [link to my video result](./project_video.mp4)
 
 ### Discussion
 
-#### 10. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### 9. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 Quite a few!!! Here's where I got stuck.
 (3) Combining gradient and color transforms to show respective pixels on blue and green channels on the same image
