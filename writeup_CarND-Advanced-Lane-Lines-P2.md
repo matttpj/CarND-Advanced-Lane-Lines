@@ -15,13 +15,13 @@ The goals / steps of this project are the following:
   4. Apply a perspective transform to rectify binary image ("birds-eye view").
   5. Detect lane pixels and fit to find the lane boundary.
   6. Determine the curvature of the lane and vehicle position with respect to center.
-  7. Warp the detected lane boundaries back onto the original image and show estimation of lane curvature and vehicle position.
+  7. Warp the detected lane boundaries back onto the original image and show estimate of lane curvature and vehicle position.
   8. Run project videos of a car driving down the freeway through the image processing pipeline.
   9. Discuss challenging aspects of the project.
 
 ## Image References
 
-|1. Chessboard corners identified |2. Straight road undistorted |
+|1. Chessboard corners identified |2. Curved road undistorted |
 |:---:|:---:|
 |<img src="./camera_cal/corners06.jpg"> |<img src="./output_images/undistort_07.jpg"> |
 |3. Combined thresholds transformed |4. Perspective transformed to birds-eye view |
