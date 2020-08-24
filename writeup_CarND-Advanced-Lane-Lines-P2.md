@@ -48,17 +48,17 @@ The goals / steps of this project are the following:
 
 The code for this step is contained in the first section of the IPython notebook "P2.ipynb" 
 
-I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
+__Object Points__ are the (x, y, z) coordinates of the chessboard corners and assumes the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image. `objp` is a replicated array of coordinates and `objpoints` is appended every time all chessboard corners are detected in a test image.  __Image Points__ will be appended with the (x, y) pixel position of each of the corners in the image plane for each successful chessboard detection.  
 
-I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
+Output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  The distortion correction was applied to the camera test images using the `cv2.undistort()` function with the follow results: 
 
 **Calibrated Camera Images**
 <br/>
-<img src="./camera_cal/undistort_00.jpg" width=40% height=40%>
-<img src="./camera_cal/undistort_01.jpg" width=40% height=40%>
-<img src="./camera_cal/undistort_02.jpg" width=40% height=40%>
-<img src="./camera_cal/undistort_03.jpg" width=40% height=40%>
-<img src="./camera_cal/undistort_04.jpg" width=40% height=40%>
+<img src="./camera_cal/corners_16.jpg" width=40% height=40%>
+<img src="./camera_cal/corners_17.jpg" width=40% height=40%>
+<img src="./camera_cal/corners_18.jpg" width=40% height=40%>
+<img src="./camera_cal/corners_19.jpg" width=40% height=40%>
+
 
 
 ### Pipeline (single images)
