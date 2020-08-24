@@ -22,7 +22,11 @@ The goals / steps of this project are the following:
 
 ## Image References
 
-<img src="./camera_cal/corners06.jpg" width=40% height=40% title="Chessboard corners identified">
+**Chessboard corners identified**
+<img src="./camera_cal/corners06.jpg" width=40% height=40%>
+**Straight road undistorted**
+<img src="./output_images/undistort_01.jpg" width=40% height=40%>
+
 [image1]: ./camera_cal/corners06.jpg "Chessboard corners identified"
 [image2]: ./output_images/undistort_01.png "Straight road undistorted"
 [image3]: ./output_images/threshold_07.jpg "Combined thresholds transformed"
