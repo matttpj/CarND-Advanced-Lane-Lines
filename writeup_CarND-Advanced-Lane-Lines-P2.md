@@ -69,7 +69,7 @@ The matrix and distortion coefficients calculated in step 1 (camera calibration 
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted __test_images__ are available here:* 
+*A full set of undistorted test_images are available here:* 
 __./output_images/undistort_*.jpg__ 
 <br/>
 
@@ -83,7 +83,7 @@ A combination of gradient threshold and color threshold functions were applied t
 <img src="./output_images/threshold_06.jpg" width=40% height=40%>
 <img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
-*A full set of threshold transformed __test_images__ are available here:* 
+*A full set of threshold transformed test_images are available here:* 
 __./output_images/threshold_*.jpg__ 
 <br/>
 
@@ -105,7 +105,7 @@ The following source and destination points were used to feed the transform meth
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
 <br/>
-*A full set of birds-eye perspective transforms are available here:* 
+*A full set of birds-eye perspective transformed images are available here:* 
 __./output_images/birdseye_threshold_.jpg__
 <br/>
 
@@ -125,6 +125,7 @@ Then left-side pixels are painted red and right-side painted blue and best-fit p
 *A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and also available here:* 
 __./output_images/lanes_*.jpg__
 <br/>
+
 
 #### 6. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
