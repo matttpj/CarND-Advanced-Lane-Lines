@@ -22,12 +22,24 @@ The goals / steps of this project are the following:
 
 ## Image References
 
-|Chessboard corners identified |Straight road undistorted |
+|1. Chessboard corners identified |2. Straight road undistorted |
 |---|---|
 |<img src="./camera_cal/corners06.jpg"> |<img src="./output_images/undistort_01.jpg"> |
+|3. Combined thresholds transformed |4. Perspective transformed to birds-eye view |
+|---|---|
+|<img src="./output_images/threshold_07.jpg"> |<img src=./output_images/perspective_00.jpg> |
+|5. Lane pixels and best-fit line identified |6. Lane curvature and vehicle offset calculated |
+|---|---|
+|<img src="./output_images/lanes_00.jpg"> |<img src="./output_images/overlay_00.jpg"> |
+|7. Lane boundaries overlayed |8. Lane curvature and vehicle offset position overlayed|
+|---|---|
+|<img src="./output_images/final_00.jpg"> |<img src="Lane curvature and vehicle offset position overlayed"> |
+|9. Project video processed | |
+|---|---|
+|<img src="./output_videos/ALL_project_video.mp4"> ||
+|---|---|
 
-[image1]: ./camera_cal/corners06.jpg "Chessboard corners identified"
-[image2]: ./output_images/undistort_01.png "Straight road undistorted"
+
 [image3]: ./output_images/threshold_07.jpg "Combined thresholds transformed"
 [image4]: ./output_images/perspective_00.jpg "Perspective transformed to birds-eye view"
 [image5]: ./output_images/lanes_00.jpg "Lane pixels and best-fit line identified"
