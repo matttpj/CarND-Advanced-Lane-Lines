@@ -46,13 +46,14 @@ The goals / steps of this project are the following:
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the first section of the IPython notebook "P2.ipynb" and calibrate_camera.py and distortion.py python file.
+The code for this step is contained in the first section of the IPython notebook __P2.ipynb__ and __calibrate_camera.py__ and __distortion.py__ python files. 
 
 __Object Points__ are the (x, y, z) coordinates of the chessboard corners and assumes the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image. `objp` is a replicated array of coordinates and `objpoints` is appended every time all chessboard corners are detected in a test image.  __Image Points__ will be appended with the (x, y) pixel position of each of the corners in the image plane for each successful chessboard detection.  
 
-Output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  The distortion correction was applied to one of the camera test images using `cv2.undistort()` with the below result.
+Output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  The Distortion class which includes `cv2.undistort()` as a class method was applied to one of the camera calibration images with the below result.
+<br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
- 
+<br/>
 *A full set of undistorted camera calibration images are available here: __./camera_cal/undistort*.jpg__*
 <br/>
 
@@ -61,12 +62,14 @@ Output `objpoints` and `imgpoints` are used to compute the camera calibration an
 
 #### 2. Provide an example of a distortion-corrected image.
 
-The code for this step is in the second section of the IPython notebook "P2.ipynb", "calibrate_camera.py" and "distortion.py" python file.
+The code for this step is in the second section of the IPython notebook __P2.ipynb__, __calibrate_camera.py__ and __distortion.py__ python file.
 
-The matrix and distortion coefficients calculated in step 1 (camera calibration using chessboard images) are stored in a pickle file "./camera_cal/wide_dist_pickle.p". Distortion class includes "cv2.undistort()" as a class method and when instantiated and applied to images in folder "test_images" obtained the following results.
+The matrix and distortion coefficients calculated in step 1 (camera calibration using chessboard images) are stored in a pickle file __./camera_cal/wide_dist_pickle.p__. The Distortion class includes "cv2.undistort()" as a class method and when instantiated and applied to images in folder __test_images__ obtained the following results.
+<br/>
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
-*A full set of undistorted camera calibration images are available here: __./output_images/undistort_*.jpg__*
+<br/>
+*A full set of undistorted __./test_images/*.jpg__ images are available here: __./output_images/undistort_*.jpg__*
 <br/>
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
