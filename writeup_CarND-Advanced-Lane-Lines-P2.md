@@ -52,13 +52,13 @@ __Object Points__ are the (x, y, z) coordinates of the chessboard corners and as
 
 Output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  The distortion correction was applied to the camera test images using the `cv2.undistort()` function with the follow results: 
 
-**Calibrated Camera Images**
+**Calibrate Camera Images - undistorted**
 <br/>
-<img src="./camera_cal/corners16.jpg" width=40% height=40%>
-<img src="./camera_cal/corners17.jpg" width=40% height=40%>
-<img src="./camera_cal/corners18.jpg" width=40% height=40%>
-<img src="./camera_cal/corners19.jpg" width=40% height=40%>
-
+<img src="./camera_cal/undistort17.jpg" width=40% height=40%>
+<img src="./camera_cal/undistort18.jpg" width=40% height=40%>
+<img src="./camera_cal/undistort19.jpg" width=40% height=40%>
+<img src="./camera_cal/undistort20.jpg" width=40% height=40%>
+All undistorted camera calibration images stored here: __./camera_cal/undistort*.jpg__
 
 ### Pipeline (single images)
 
