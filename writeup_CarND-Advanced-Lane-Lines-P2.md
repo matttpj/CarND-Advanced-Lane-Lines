@@ -20,8 +20,9 @@ The goals / steps of this project are the following:
   9. Run project videos of a car driving down the freeway through the image processing pipeline.
  10. Discuss challenging aspects of the project.
 
-# (Image References)
+## Image References
 
+<img src="./camera_cal/corners06.jpg" width=40% height=40% title="Chessboard corners identified">
 [image1]: ./camera_cal/corners06.jpg "Chessboard corners identified"
 [image2]: ./output_images/undistort_01.png "Straight road undistorted"
 [image3]: ./output_images/threshold_07.jpg "Combined thresholds transformed"
