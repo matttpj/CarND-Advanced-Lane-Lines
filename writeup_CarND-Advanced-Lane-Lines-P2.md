@@ -84,7 +84,7 @@ A combination of gradient threshold and color threshold functions were applied t
 <img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
 *A full set of threshold transformed test_images are available here:* 
-**./output_images/threshold_*.jpg**
+**./output_images/threshold_*.jpg***
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
