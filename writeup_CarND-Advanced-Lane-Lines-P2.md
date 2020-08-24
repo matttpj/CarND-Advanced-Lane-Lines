@@ -23,21 +23,17 @@ The goals / steps of this project are the following:
 ## Image References
 
 |1. Chessboard corners identified |2. Straight road undistorted |
-|---|---|
-|<img src="./camera_cal/corners06.jpg"> |<img src="./output_images/undistort_01.jpg"> |
+|:---:|:---:|
+|<img src="./camera_cal/corners06.jpg"> |<img src="./output_images/undistort_07.jpg"> |
 |3. Combined thresholds transformed |4. Perspective transformed to birds-eye view |
-|---|---|
-|<img src="./output_images/threshold_07.jpg"> |<img src=./output_images/perspective_00.jpg> |
+|<img src="./output_images/threshold_07.jpg"> |<img src=./output_images/birdseye_threshold_07.jpg> |
 |5. Lane pixels and best-fit line identified |6. Lane curvature and vehicle offset calculated |
-|---|---|
-|<img src="./output_images/lanes_00.jpg"> |<img src="./output_images/overlay_00.jpg"> |
+|<img src="./output_images/lanes_07.jpg"> |<img src="./output_images/overlay_07.jpg"> |
 |7. Lane boundaries overlayed |8. Lane curvature and vehicle offset position overlayed|
-|---|---|
-|<img src="./output_images/final_00.jpg"> |<img src="Lane curvature and vehicle offset position overlayed"> |
+|<img src="./output_images/final_00.jpg"> |<img src="./output_images/final_07.jpg"> |
 |9. Project video processed | |
-|---|---|
 |<img src="./output_videos/ALL_project_video.mp4"> ||
-|---|---|
+
 
 
 [image3]: ./output_images/threshold_07.jpg "Combined thresholds transformed"
