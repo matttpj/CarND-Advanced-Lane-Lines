@@ -1,4 +1,4 @@
-# **Advanced Lane Lines **
+# Advanced Lane Lines
 
 ## Writeup by Matthew Jones
 
@@ -69,8 +69,8 @@ The matrix and distortion coefficients calculated in step 1 (camera calibration 
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted __test_images__ are available here:*
-__./output_images/undistort_*.jpg__
+*A full set of undistorted __test_images__ are available here:*  
+__./output_images/undistort_*.jpg__  
 <br/>
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
@@ -80,31 +80,34 @@ A combination of gradient threshold and color threshold functions were applied t
 <br/>
 <img src="./output_images/threshold_00.jpg" width=40% height=40%>
 <img src="./output_images/threshold_01.jpg" width=40% height=40%>
-<img src="./output_images/threshold_02.jpg" width=40% height=40%>
-<img src="./output_images/threshold_03.jpg" width=40% height=40%>
+<img src="./output_images/threshold_06.jpg" width=40% height=40%>
+<img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
-*A full set of threshold transformed __test_images__ are available here:*
-__./output_images/threshold_*.jpg__
+*A full set of threshold transformed __test_images__ are available here:* 
+__./output_images/threshold_*.jpg__  
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for this step is in the fourth section of the IPython notebook "P2.ipynb". 
+The code for this step is in the fourth section of the IPython notebook __P2.ipynb__ and __birdseye.py__. 
 
-My perspective transform uses a hard coded points from a straight line view of the road "test_images/straight-line1.jpg" and after undistortion converts to a top-down perspective view using four corners of a polygon and converting to top-down view using an offset and verified by printing the result of a perspective transform.
+My perspective transform uses a hard coded points from a straight line view of the road __./test_images/straight-line1.jpg__ to a top-down perspective birds-eye view which were then verified by outputting the resulting to screen and adjusted according.
 
 This resulted in the following source and destination points:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 600, 450      | 450, 0        | 
-| 700, 450      | 830, 0        |
-| 1100, 720     | 830, 720      |
-| 200, 720      | 450, 720      |
-
-
-<img src="./output_images/undistort_07+poly.jpg" width=40% height=40%>
-<img src="./output_images/persp_07.jpg" width=40% height=40%>
+| 600, 450      | 200, 0        | 
+| 700, 450      | 1000, 0       |
+| 1020, 660     | 1020, 660     |
+| 210, 720      | 210, 720      |
+<br/>
+<img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
+<img src="./output_images/birdseye_threshold_07.jpg" width=40% height=40%>
+<br/>
+*A full set of birds-eye perspective transforms are available here:* 
+__./output_images/birdseye_threshold_*.jpg__  
+<br/>
 
 #### 5. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
