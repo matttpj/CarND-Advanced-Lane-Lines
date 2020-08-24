@@ -94,7 +94,7 @@ The code for this step is in the fourth section of the IPython notebook __P2.ipy
 BirdsEyeView class includes methods to transform the perspective of any image to or from a birds-eye view using class methods that use __cv2.getPerspectiveTransform()__ and __cv2.warpPerspective()__. My perspective transform uses a hard coded set of polygon points from the straight line view of the road __./test_images/straight-line1.jpg__ to a top-down perspective birds-eye view. These points were then verified and adjusted after outputting the results to the screen.
 
 The following source and destination points were used to feed the transform methods.
-
+<br/>
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
 | 600, 450      | 200, 0        | 
