@@ -54,7 +54,7 @@ Output `objpoints` and `imgpoints` are used to compute the camera calibration an
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted camera calibration images are available here: __./camera_cal/undistort*.jpg__*
+*A full set of undistorted camera calibration images are available here:* __./camera_cal/undistort*.jpg__
 <br/>
 
 
@@ -69,15 +69,18 @@ The matrix and distortion coefficients calculated in step 1 (camera calibration 
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted __./test_images/*.jpg__ images are available here: __./output_images/undistort_*.jpg__*
+*A full set of undistorted __./test_images/*.jpg__ images are available here:*
+__./output_images/undistort_*.jpg__
 <br/>
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-The code for this step is in the third section of the IPython notebook "P2.ipynb" 
-I used a combination of color threshold and combined gradient thresholds to generate a binary image (thresholding steps at lines on color channel [s_thresh = (170,255)] and on X gradient [x_thresh = (20,100)]
-Here's an example of my output for this step. 
-<img src="./output_images/thresh_00.jpg" width=40% height=40%>
+The code for this step is in the third section of the IPython notebook __P2.ipynb__ and __combined_thresholds.py__ python file.
+A combination of gradient threshold and color threshold functions were applied to generate a binary image in which lines could be more easily identified. A combination of transforms were made using absolute Sobel gradient threshold on the X and Y gradients, Saturation threshold on the S channel of HLS colorspace and  Red threshold on the R channel or RGB colorspace. Through experimentation Magnitude and Direction gradient threshold transforms were found to be ineffective. Here are some examples of my output from this step. 
+<br/>
+<img src="./output_images/threshold_01.jpg" width=40% height=40%>
+<img src="./output_images/threshold_07.jpg" width=40% height=40%>
+<br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
