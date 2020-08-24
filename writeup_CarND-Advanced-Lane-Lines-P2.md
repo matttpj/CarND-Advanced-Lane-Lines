@@ -91,9 +91,9 @@ __./output_images/threshold_*.jpg__
 
 The code for this step is in the fourth section of the IPython notebook __P2.ipynb__ and __birdseye.py__. 
 
-My perspective transform uses a hard coded points from a straight line view of the road __./test_images/straight-line1.jpg__ to a top-down perspective birds-eye view which were then verified by outputting the resulting to screen and adjusted according.
+BirdsEyeView class includes methods to transform the perspective of any image to or from a birds-eye view using class methods that use __cv2.getPerspectiveTransform()__ and __cv2.warpPerspective()__. My perspective transform uses a hard coded set of polygon points from the straight line view of the road __./test_images/straight-line1.jpg__ to a top-down perspective birds-eye view. These points were then verified and adjusted after outputting the results to the screen.
 
-This resulted in the following source and destination points:
+The following source and destination points were used to feed the transform methods.
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
@@ -102,8 +102,8 @@ This resulted in the following source and destination points:
 | 1020, 660     | 1020, 660     |
 | 210, 720      | 210, 720      |
 <br/>
+<img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
-<img src="./output_images/birdseye_threshold_07.jpg" width=40% height=40%>
 <br/>
 *A full set of birds-eye perspective transforms are available here:* 
 __./output_images/birdseye_threshold_*.jpg__  
