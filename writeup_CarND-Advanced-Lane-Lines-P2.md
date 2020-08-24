@@ -54,7 +54,7 @@ Output `objpoints` and `imgpoints` are used to compute the camera calibration an
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted camera calibration images are available here:* **./camera_cal/undistort*.jpg**
+*A full set of undistorted camera calibration images are available here:* __./camera_cal/undistort*.jpg__
 <br/>
 
 
@@ -118,10 +118,7 @@ The lower half of the image is selected and a histogram analysis is performed on
 Mid-points of the left and right sides of the image are marked as starting points then a series of small windows are drawn from bottom to top of image with a boundary line. Then active (white) pixels within the window are identified and added to the lists of left-side and right-side pixels. Then the next window is scanned for pixels and if it is above a minimum then the window is re-centered on the current position and the active pixels added to the left-side and right-side lists.
 The lists of left-side and right-side pixels are then passed to the polyfit() function to identify best fit polynomial function.
 Then left-side pixels are painted red and right-side painted blue and best-fit polynomial line is drawn in yellow across the images.
-<br/>
-<img src="./output_images/windows_00.jpg" width=35% height=35%>
-<img src="./output_images/lanes_00.jpg" width=35% height=35%>
-<br/>
+
 *A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and also available here:* 
 **./output_images/lanes_*.jpg**
 <br/>
