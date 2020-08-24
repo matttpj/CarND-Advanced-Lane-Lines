@@ -119,7 +119,7 @@ Mid-points of the left and right sides of the image are marked as starting point
 The lists of left-side and right-side pixels are then passed to the polyfit() function to identify best fit polynomial function.
 Then left-side pixels are painted red and right-side painted blue and best-fit polynomial line is drawn in yellow across the images.
 <br/>
-<img src="./output_images/windows_00jpg" width=40% height=40%>
+<img src="./output_images/windows_00.jpg" width=40% height=40%>
 <img src="./output_images/lanes_00.jpg" width=40% height=40%>
 <br/>
 *A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and also available here:* 
