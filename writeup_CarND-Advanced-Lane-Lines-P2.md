@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 
 |Chessboard corners identified |Straight road undistorted |
 |---|---|
-|<img src="./camera_cal/corners06.jpg" width=40% height=40%> |<img src="./output_images/undistort_01.jpg" width=40% height=40%> |
+|<img src="./camera_cal/corners06.jpg" |<img src="./output_images/undistort_01.jpg" |
 
 [image1]: ./camera_cal/corners06.jpg "Chessboard corners identified"
 [image2]: ./output_images/undistort_01.png "Straight road undistorted"
