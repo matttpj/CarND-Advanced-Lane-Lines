@@ -69,7 +69,7 @@ The matrix and distortion coefficients calculated in step 1 (camera calibration 
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted __./test_images/*.jpg__ images are available here:*
+*A full set of undistorted __test_images__ are available here:*
 __./output_images/undistort_*.jpg__
 <br/>
 
@@ -78,8 +78,13 @@ __./output_images/undistort_*.jpg__
 The code for this step is in the third section of the IPython notebook __P2.ipynb__ and __combined_thresholds.py__ python file.
 A combination of gradient threshold and color threshold functions were applied to generate a binary image in which lines could be more easily identified. A combination of transforms were made using absolute Sobel gradient threshold on the X and Y gradients, Saturation threshold on the S channel of HLS colorspace and  Red threshold on the R channel or RGB colorspace. Through experimentation Magnitude and Direction gradient threshold transforms were found to be ineffective. Here are some examples of my output from this step. 
 <br/>
+<img src="./output_images/threshold_00.jpg" width=40% height=40%>
 <img src="./output_images/threshold_01.jpg" width=40% height=40%>
-<img src="./output_images/threshold_07.jpg" width=40% height=40%>
+<img src="./output_images/threshold_02.jpg" width=40% height=40%>
+<img src="./output_images/threshold_03.jpg" width=40% height=40%>
+<br/>
+*A full set of threshold transformed __test_images__ are available here:*
+__./output_images/threshold_*.jpg__
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
