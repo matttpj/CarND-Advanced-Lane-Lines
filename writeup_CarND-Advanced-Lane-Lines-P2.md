@@ -114,15 +114,17 @@ __./output_images/birdseye_threshold_.jpg__
 The code for this step is in the fifth section of the IPython notebook __P2.ipynb__ and __detect.py__ and __lanes.py__ and __lane.py__. 
 This step begins with images that have already been undistorted and transformed using  combined threshold and birds-eye perspective functions.
 
-
-
-The lower half of the image is selected and a histogram analysis of left to right view of the image to find peaks of active (white) pixel destiny.
-Mid-points of left and right side of the image are marked as starting points then a series of small windows are drawn from bottom to top of image with a boundary line. Then active (white) pixels within the window are identified and added to list of left-side and right-side pixels. Then the next window is scanned for pixels and if is above a minimum then the window is re-centered on the current position and the active pixels added to the left-side and right-side lists.
+The lower half of the image is selected and a histogram analysis is performed on the  left to right view of the image to find peaks of active (white) pixel destiny.
+Mid-points of the left and right sides of the image are marked as starting points then a series of small windows are drawn from bottom to top of image with a boundary line. Then active (white) pixels within the window are identified and added to the lists of left-side and right-side pixels. Then the next window is scanned for pixels and if it is above a minimum then the window is re-centered on the current position and the active pixels added to the left-side and right-side lists.
 The lists of left-side and right-side pixels are then passed to the polyfit() function to identify best fit polynomial function.
-Then left-side pixels are painted red and right-side painted blue and best-fit polynomial line is drawn across the images.
-
-<img src="./output_images/warped+lanes_00.jpg.jpg" width=40% height=40%>
-<img src="./output_images/warped+lanes_01.jpg" width=40% height=40%>
+Then left-side pixels are painted red and right-side painted blue and best-fit polynomial line is drawn in yellow across the images.
+<br/>
+<img src="./output_images/windows_00jpg" width=40% height=40%>
+<img src="./output_images/lanes_00.jpg" width=40% height=40%>
+<br/>
+*A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and also available here:* 
+__./output_images/lanes_*.jpg__
+<br/>
 
 #### 6. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
