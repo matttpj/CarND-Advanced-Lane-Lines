@@ -23,6 +23,7 @@ The goals / steps of this project are the following:
 ## Image References
 
 |1. Chessboard corners identified |2. Straight road undistorted |
+|:---:|:---:|
 |<img src="./camera_cal/corners06.jpg"> |<img src="./output_images/undistort_07.jpg"> |
 |3. Combined thresholds transformed |4. Perspective transformed to birds-eye view |
 |<img src="./output_images/threshold_07.jpg"> |<img src=./output_images/birdseye_threshold_07.jpg> |
@@ -31,7 +32,7 @@ The goals / steps of this project are the following:
 |7. Lane boundaries overlayed |8. Lane curvature and vehicle offset position overlayed|
 |<img src="./output_images/final_00.jpg"> |<img src="./output_images/final_07.jpg"> |
 |9. Project video processed | |
-|<video src="./output_videos/ALL_project_video.mp4"> ||
+|<img src="./output_videos/ALL_project_video.jpg"> ||
 
 
 ## [Rubric Points](https://review.udacity.com/#!/rubrics/571/view)
