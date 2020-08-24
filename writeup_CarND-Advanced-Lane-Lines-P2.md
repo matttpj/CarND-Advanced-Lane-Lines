@@ -54,11 +54,6 @@ Output `objpoints` and `imgpoints` are used to compute the camera calibration an
 
 **Calibrated Camera Images**
 <br/>
-<img src="./camera_cal/corners_16.jpg" width=40% height=40%>
-<img src="./camera_cal/corners_17.jpg" width=40% height=40%>
-<img src="./camera_cal/corners_18.jpg" width=40% height=40%>
-<img src="./camera_cal/corners_19.jpg" width=40% height=40%>
-
 
 
 ### Pipeline (single images)
