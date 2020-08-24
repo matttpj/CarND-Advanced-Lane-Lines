@@ -69,8 +69,8 @@ The matrix and distortion coefficients calculated in step 1 (camera calibration 
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted __test_images__ are available here:*  
-__./output_images/undistort_*.jpg__  
+*A full set of undistorted __test_images__ are available here:* 
+__./output_images/undistort_*.jpg__ 
 <br/>
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
@@ -84,7 +84,7 @@ A combination of gradient threshold and color threshold functions were applied t
 <img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
 *A full set of threshold transformed __test_images__ are available here:* 
-__./output_images/threshold_*.jpg__  
+__./output_images/threshold_*.jpg__ 
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
@@ -106,13 +106,16 @@ The following source and destination points were used to feed the transform meth
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
 <br/>
 *A full set of birds-eye perspective transforms are available here:* 
-__./output_images/birdseye_threshold_*.jpg__  
+__./output_images/birdseye_threshold_*.jpg__ 
 <br/>
 
 #### 5. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-The code for this step is in the fifth section of the IPython notebook "P2.ipynb". 
-Starting with the warped images that have been undistorted and perspective transformed to top-down view in grayscale.
+The code for this step is in the fifth section of the IPython notebook __P2.ipynb__ and __detect.py__ and __lanes.py__ and __lane.py__. 
+This step begins with images that have already been undistorted and transformed using  combined threshold and birds-eye perspective functions.
+
+
+
 The lower half of the image is selected and a histogram analysis of left to right view of the image to find peaks of active (white) pixel destiny.
 Mid-points of left and right side of the image are marked as starting points then a series of small windows are drawn from bottom to top of image with a boundary line. Then active (white) pixels within the window are identified and added to list of left-side and right-side pixels. Then the next window is scanned for pixels and if is above a minimum then the window is re-centered on the current position and the active pixels added to the left-side and right-side lists.
 The lists of left-side and right-side pixels are then passed to the polyfit() function to identify best fit polynomial function.
