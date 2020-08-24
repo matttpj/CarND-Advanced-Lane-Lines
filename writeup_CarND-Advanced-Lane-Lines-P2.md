@@ -70,7 +70,7 @@ The matrix and distortion coefficients calculated in step 1 (camera calibration 
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
 *A full set of undistorted test_images are available here:* 
-__./output_images/undistort_*.jpg__ 
+./output_images/undistort_*.jpg
 <br/>
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
