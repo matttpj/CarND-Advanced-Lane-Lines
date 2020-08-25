@@ -78,8 +78,9 @@ def saturation_threshold(img, thresh=(0, 255)):
     # Convert to HLS colorspace
     hls = rgb_to_hls(img)
 
-    # Use only the saturation channel
-    S = hls[:,:,2]
+    H = hls[:,:,0]
+    L = hls[:,:,1]
+    S = hls[:,:,2] # Use only the saturation channel
 
     # Create a binary mask where saturation thresholds are met
     binary_output = np.zeros_like(S)

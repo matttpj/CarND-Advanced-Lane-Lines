@@ -38,11 +38,7 @@ def quick_detect_lane_lines(image, last_lanes):
     left = Lane(left_x, left_y)
     right = Lane(right_x, right_y)
 
-    lanes_image = np.dstack((image, image, image))
-    lanes_image[left_y, left_x] = [255,0,0] # red
-    lanes_image[right_y, right_x] = [0,0,255] # blue
-
-    return Lanes(left, right), image, lanes_image
+    return Lanes(left, right), image
 
 def full_detect_lane_lines(image):
     # Settings
@@ -126,11 +122,7 @@ def full_detect_lane_lines(image):
     left = Lane(left_x, left_y)
     right = Lane(right_x, right_y)
 
-    lanes_image = np.dstack((image, image, image))
-    lanes_image[left_y, left_x] = [255,0,0] # red
-    lanes_image[right_y, right_x] = [0,0,255] # blue
-
-    return Lanes(left, right), out_image, lanes_image
+    return Lanes(left, right), out_image
 
 if __name__ == "__main__":
     birdseye = BirdsEyeView()
@@ -142,4 +134,4 @@ if __name__ == "__main__":
     image = birdseye.transform_to_birdseye(image)
     image, gb = combined_thresholds.pipeline(image)
 
-    lanes, win_image, lanes_image = detect_lane_lines(image)
+    lanes, win_image = detect_lane_lines(image)
