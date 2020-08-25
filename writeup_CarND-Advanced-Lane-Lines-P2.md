@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 |3. Combined thresholds transformed |4. Perspective transformed to birds-eye view |
 |<img src="./output_images/threshold_07.jpg"> |<img src=./output_images/birdseye_threshold_07.jpg> |
 |5. Lane pixels and line of best fit identified |6. Lane curvature and vehicle offset calculated |
-|<img src="./output_images/bestfit_lanes_07.jpg"> |<img src="./output_images/overlay_07.jpg"> |
+|<img src="./output_images/lanes_07.jpg"> |<img src="./output_images/overlay_07.jpg"> |
 |7. Lane boundaries, curvature and vehicle offset overlayed |8. Project video processed |
 |<img src="./output_images/final_00.jpg"> |<img src="./output_videos/ALL_project_video.jpg"> |
 
