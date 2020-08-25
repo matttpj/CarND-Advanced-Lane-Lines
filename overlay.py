@@ -34,7 +34,7 @@ def overlay_lane(image, left_fit, right_fit, birdseye):
     pts_right = np.array([np.flipud(np.transpose(np.vstack([right_xs, right_ys])))])
     pts = np.hstack((pts_left, pts_right))
 
-    cv2.fillPoly(color_warp, np.int_([pts]), (255, 0, 0))
+    cv2.fillPoly(color_warp, np.int_([pts]), (0, 0, 255))
     newwarp = cv2.warpPerspective(color_warp, birdseye.inverse_transform_matrix(), (image.shape[1], image.shape[0]))
     newwarp = birdseye.transform_from_birdseye(color_warp, image)
 
@@ -67,7 +67,6 @@ if __name__ == "__main__":
     distortion = Distortion(calibration_data_filepath="./camera_cal/wide_dist_pickle.p")
     overlay = OverlayDetectedLaneData(birdseye=birdseye)
 
-    # images_glob = glob.glob("images/test/*.jpg")
     images_glob = glob.glob("./test_images/test1.jpg")
 
     for filepath in images_glob:

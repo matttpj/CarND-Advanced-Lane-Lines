@@ -100,7 +100,7 @@ def red_threshold(img, thresh=(0, 255)):
 
 def pipeline(img):
     # Choose a Sobel kernel size
-    KSIZE = 15
+    KSIZE = 5
 
     X_THRESH = (20,100)
     Y_THRESH = (70,100)
@@ -130,7 +130,7 @@ def pipeline(img):
 if __name__ == "__main__":
     distortion = Distortion(calibration_data_filepath="./camera_cal/wide_dist_pickle.p")
 
-    filepath = "./test_images/test1.jpg"
+    filepath = "./test_images/test5.jpg"
     image = rgb_image(filepath)
     image = distortion.undistort(image)
     image, gb = combined_thresholds.pipeline(image)
