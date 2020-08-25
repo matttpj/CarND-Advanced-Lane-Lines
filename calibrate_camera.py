@@ -44,7 +44,7 @@ def calibrate_camera():
 
         corners_img = cv2.drawChessboardCorners(img, (9,6), corners, ret)
         plt.imsave("./camera_cal/corners{:02d}.jpg" .format(i+1), corners_img)
-        plt.pause(0.5)
+        #plt.pause(0.5)
 
     # Use the object points and image points to calibrate a camera
     _, mtx, dist, _, _ = cv2.calibrateCamera(objpoints, imgpoints, image_shape, None, None)

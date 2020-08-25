@@ -100,7 +100,7 @@ def red_threshold(img, thresh=(0, 255)):
 
 def pipeline(img):
     # Choose a Sobel kernel size
-    KSIZE = 5
+    KSIZE = 15
 
     X_THRESH = (20,100)
     Y_THRESH = (70,100)

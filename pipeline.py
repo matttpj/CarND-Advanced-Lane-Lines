@@ -43,7 +43,6 @@ if __name__ == "__main__":
     np.seterr(all='ignore')
     pipeline = Pipeline()
 
-    # images_glob = glob.glob("./test_images/test/*.jpg")
     images_glob = glob.glob("./test_images/test3.jpg")
 
     for filepath in images_glob:
