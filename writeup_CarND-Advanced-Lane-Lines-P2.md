@@ -48,9 +48,7 @@ The goals / steps of this project are the following:
 
 The code for this step is contained in the first section of the IPython notebook __P2.ipynb__ and __calibrate_camera.py__ and __distortion.py__ python files. 
 
-__Object Points__ are the (x, y, z) coordinates of the chessboard corners and assumes the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image. `objp` is a replicated array of coordinates and `objpoints` is appended every time all chessboard corners are detected in a test image.  __Image Points__ will be appended with the (x, y) pixel position of each of the corners in the image plane for each successful chessboard detection.  
-
-Output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  The Distortion class which includes `cv2.undistort()` as a class method was applied to one of the camera calibration images with the below result.
+Camera calibration is done by loading the calibration images at __camera_cal/calibrate*.jpg__ and running grayscale versions through _cv2.findChessboardCorners()_. Corners are drawn on these images using _cv2.drawChessboardCorners()_ and saved as output to __camera_cal/corners*.jpg__.  *objpoints* and *imgpoints* arrays are passed to _cv2.calibrateCamera()_ which returns the distortion coefficients and matrix needed to undistort the image.  Distortion matrix and coefficients are stored in a pickle file so that they can be re-used throughout the project to undistort images. This is done by instantiating a __Distortion__ object from the the pickle file and calling __undistort()__ which uses _cv2.undistort()_ to undistort the image. An example set of camera calibration chessboard images that have been undistorted by loading the Distortion object and calling __undistort()__ is shown below. A full set of undistorted camera calibration images are saved at __camera_cal/undistort*.jpg__  
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
