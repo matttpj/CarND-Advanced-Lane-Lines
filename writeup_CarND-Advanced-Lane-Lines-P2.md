@@ -52,7 +52,7 @@ Camera calibration is done by loading the calibration images at __camera_cal/cal
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted camera calibration images are available here:* __./camera_cal/undistort*.jpg__
+*A full set of undistorted camera calibration images are available here:* ./camera_cal/undistort*.jpg
 <br/>
 
 
