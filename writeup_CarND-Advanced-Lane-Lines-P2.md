@@ -158,15 +158,15 @@ Left lane curvature, right lane curvature and vehicle offset position from cente
 <br/>
 | Test image: | ./test_images/straight_lines1.jpg |
 |:---:|:---:|
-|Left curvature: | 4103.6516 m |
-|Right curvature: | 1287.9599 m |
-|Vehicle offset: | -0.1752 m |
+|Left curvature: | 2172.2714 m |
+|Right curvature: | 1303.7684 |
+|Vehicle offset: | 0.0381 m |
 
 | Test image: | ./test_images/test6.jpg |
 |:---:|:---:|
-|Left curvature: | 578.3859 m |
-|Right curvature: | 700.0287 m |
-|Vehicle offset: | 0.1307 m |
+|Left curvature: | 572.6570 m |
+|Right curvature: | 897.3498 m |
+|Vehicle offset: | 0.3687 m |
 
 <br/>
 *A full set of lane curvature and vehicle offset calculations are shown in the P2.ipynb notebook.*

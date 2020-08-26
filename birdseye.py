@@ -6,8 +6,8 @@ default_src_points = np.float32([[600, 450],
                                  [1020, 720],
                                  [210, 720]])
 
-default_dst_points  = np.float32([[200, 0],
-                                  [1000, 0],
+default_dst_points  = np.float32([[210, 0],
+                                  [1020, 0],
                                   [1020, 720],
                                   [210, 720]])
 
