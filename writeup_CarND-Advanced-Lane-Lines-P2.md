@@ -209,7 +209,8 @@ In my first round submission I got stuck several times because I wrote all proje
 Otherwise, here are a few other comments.
 
 (1) Re. processing images of roads with abrupt changes in direction, slope, road surface, lighting conditions or obscured lane lines are challenging for my pipeline code. The pipeline runs okay against the basic project_video.mp4.  However, it is not successful at processing the challenge_video.mp4 and harder_challenge_video.mp4.  
-(2) Re. processing video. I could not get the MoviePY library to run with my local Jupyter/Conda install, although it does run successfully in the Udacity workspace.
+(2) There may be other thresholding techniques or additional lane information that should be stored when transitioning between video frames or images that would improve my pipeline.
+(3) Re. processing video. I could not get the MoviePY library to run with my local Jupyter/Conda install, although it does run successfully in the Udacity workspace.
 
 
 
