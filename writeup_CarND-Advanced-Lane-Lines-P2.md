@@ -48,7 +48,7 @@ The goals / steps of this project are the following:
 
 The code for this step is contained in the first section of the IPython notebook __P2.ipynb__ and __calibrate_camera.py__ and __distortion.py__ python files. 
 
-Camera calibration is done by loading the calibration images at __camera_cal/calibrate*.jpg__ and running grayscale versions through _cv2.findChessboardCorners()_. Corners are drawn on these images using _cv2.drawChessboardCorners()_ and saved as output to __camera_cal/corners*.jpg__.  *objpoints* and *imgpoints* arrays are passed to _cv2.calibrateCamera()_ which returns the distortion coefficients and matrix needed to undistort the image.  Distortion matrix and coefficients are stored in a pickle file so that they can be re-used throughout the project to undistort images. This is done by instantiating a __Distortion__ object from the the pickle file and calling __undistort()__ which uses _cv2.undistort()_ to undistort the image. An example set of camera calibration chessboard images that have been undistorted by loading the Distortion object and calling __undistort()__ is shown below. A full set of undistorted camera calibration images are saved at __camera_cal/undistort*.jpg__  
+Camera calibration is done by loading the calibration images at __camera_cal/calibrate*.jpg__ and running grayscale versions through _cv2.findChessboardCorners()_. Corners are drawn on these images using _cv2.drawChessboardCorners()_ and saved as output to __camera_cal/corners*.jpg__.  *objpoints* and *imgpoints* arrays are passed to _cv2.calibrateCamera()_ which returns the distortion coefficients and matrix needed to undistort the image.  Distortion matrix and coefficients are stored in a pickle file so that they can be re-used throughout the project to undistort images. This is done by instantiating a __Distortion__ object from the the pickle file and calling __undistort()__ which uses _cv2.undistort()_ to undistort the image. An example camera calibration chessboard image that have been undistorted by loading the Distortion object and calling __undistort()__ is shown below. 
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
@@ -62,12 +62,13 @@ Camera calibration is done by loading the calibration images at __camera_cal/cal
 
 The code for this step is in the second section of the IPython notebook __P2.ipynb__, __calibrate_camera.py__ and __distortion.py__ python file.
 
-The matrix and distortion coefficients calculated in step 1 (camera calibration using chessboard images) are stored in a pickle file __./camera_cal/wide_dist_pickle.p__. The Distortion class includes "cv2.undistort()" as a class method and when instantiated and applied to images in folder __test_images__ obtained the following results.
+Here is an example of __test_images/straight_lines.jpg__ undistorted by loading the Distortion class object and calling __undistort()__ method. Distortion class loads the camera calibration matrix and distortion coefficients from the pickle file as explained above.
+
 <br/>
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted test_images are available here:* 
+*A full set of undistorted __test_images__ are available here:* 
 **./output_images/undistort_*.jpg**
 <br/>
 
