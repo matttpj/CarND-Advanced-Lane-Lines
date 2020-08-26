@@ -3,12 +3,12 @@ import numpy as np
 
 default_src_points = np.float32([[600, 450],
                                  [700, 450],
-                                 [1020, 660],
+                                 [1020, 720],
                                  [210, 720]])
 
 default_dst_points  = np.float32([[200, 0],
                                   [1000, 0],
-                                  [1020, 660],
+                                  [1020, 720],
                                   [210, 720]])
 
 class BirdsEyeView:
