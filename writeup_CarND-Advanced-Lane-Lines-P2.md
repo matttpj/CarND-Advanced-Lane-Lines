@@ -168,13 +168,13 @@ Left lane curvature, right lane curvature and vehicle offset position from cente
 | Right curvature: | 700.0287 m |
 | Vehicle offset: | 0.1307 m |
 <br/> 
-*A full set of lane curvature and vehicle offset calculations are shown in the P2.ipynb notebook.
+*A full set of lane curvature and vehicle offset calculations are shown in the P2.ipynb notebook.*
 
 #### 7. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 The code for this step is in the seventh section of the IPython notebook __P2.ipynb__ and __pipeline.py__, __overlay.py__. 
 
-**pipeline.py** combines all the steps described above and then calls **overlay.py** to overlay a polygon marking the lane and to overlay text which shows the left and right lane curvatures and vehicle offset from the centre of the lane.
+**pipeline.py** combines all the steps described above and then calls **overlay.py** to instantiate **OverlayDetectedLaneData** object that includes method to overlay a polygon marking the lane and to overlay text which shows the left and right lane curvatures and vehicle offset from the centre of the lane.
 
 Here is an example of my results on test_images __straight_lines1.jpg__ and __test6.jpg__:
 <br/>
