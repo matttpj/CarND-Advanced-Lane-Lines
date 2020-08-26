@@ -118,19 +118,17 @@ The following source and destination points were used to feed the transform meth
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
 <br/>
-*A full set of birds-eye perspective and threshold transformed images are available here:* 
-**./output_images/birdseye_threshold_*.jpg**
+*A full set of birds-eye perspective and threshold transformed images are available here:* __./output_images/birdseye_threshold_*.jpg__
 <br/>
 
 #### 5. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-The code for this step is in the fifth section of the IPython notebook __P2.ipynb__ and __detect.py__ and __lanes.py__ and __lane.py__ python files. 
-This step begins with an image that have already been undistorted and transformed using combined threshold and birds-eye perspective functions.
+The code for this step is in the fifth section of the IPython notebook __P2.ipynb__ and __detect.py__ ,__lanes.py__, __lane.py__ , __bestfit.py__ python files. 
+This step begins with an image that has already been undistorted and transformed using combined threshold and birds-eye perspective functions.
 
-The lower half of the image is selected and a histogram analysis is performed on the  left to right view to find peaks of active (white) pixel destiny.
-Mid-points of the left and right sides of the image are marked as starting points then a series of small windows are drawn from bottom to top of image with a boundary line. For every window, active (white) pixels are identified and added to the lists of left-side and right-side pixels and then the next window is scanned for pixels. If the length of the left-side and right-side pixel arrays are above a minimum then the window is re-centered on their current positions. And then the active pixels are added to the left-side and right-side lists. The lists of left-side and right-side pixels are used to instantiate left-side and right-side Lane objects which are held in memory. *P2.ipnyb* then shows the images with sliding windows and lane line images with left-lane pixels painted red, right-lane pixels painted blue. 
+In **detect.py** lower half of the image is selected and a histogram analysis is performed on the  left to right view to find peaks of active (white) pixel destiny. Mid-points of the left and right sides of the image are marked as starting points then a series of small windows are drawn from bottom to top of image with a boundary line. For every window, active (white) pixels are identified and added to the lists of left-side and right-side pixels and then the next window is scanned for pixels. If the length of the left-side and right-side pixel arrays are above a minimum then the window is re-centered on their current positions. And then the active pixels are added to the left-side and right-side lists. The lists of left-side and right-side pixels are used to instantiate left-side and right-side Lane objects (and a Lanes object) which are cached for subsequent usage. 
 
-And then on top of each lane lime image, PixelCalculation class method of the left and right Lane objects wich in-turn calls functions *np.polyfit()*, *np.poly1d()* and *np.polyder()* to find the line of best fit polynomial which is then plotted on top of the left and right lane lines and painted yellow using *np.linspace()*.
+Then in **bestfit.py** for each lanes_image, wih PixelCalculation objects of the left and right Lane objects call functions *np.polyfit()*, *np.poly1d()* and *np.polyder()* in turn to find the best fit polynomial line which is then plotted on top of the left and right lane lines and colored yellow using *np.linspace()*, *cv2.polylines()* and *cv2.addWeighted()*.
 <br/>
 <img src="./output_images/windows_00.jpg" width=40% height=40%>
 <img src="./output_images/lanes_00.jpg" width=40% height=40%>
