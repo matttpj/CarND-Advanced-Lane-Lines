@@ -194,7 +194,7 @@ Here is an example of my results on test_images __straight_lines1.jpg__ and __te
 The code for this step is in the eighth section of the IPython notebook "P2.ipynb" and __pipeline.py__, __process_video.py__. 
 
 **process_video.py** uses the MoviePY library. Each image in the video is called by **pipeline.process_image_pipeline()** method and then re-combined to produce a new video.
-Here's a link to my video result. ./output_videos/ALL_project_video.mp4
+Here's a link to download the output after project_video.mp4 has been processed by the pipeline.
 https://github.com/matttpj/CarND-Advanced-Lane-Lines/blob/master/output_videos/ALL_project_video.mp4
 <br/>
 
@@ -204,14 +204,12 @@ https://github.com/matttpj/CarND-Advanced-Lane-Lines/blob/master/output_videos/A
 
 #### 9. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Quite a few!!! Here's where I got stuck.
-(3) Combining gradient and color transforms to show respective pixels on blue and green channels on the same image
-(5) Getting the pixels to show red and blue and then drawing the line of best fit on top
-(7) Getting the curvatures and overlays to display on the correct test_images; I had a number of isssues with lists getting out of order. Getting the pipeline function to run through all the main functions top to bottom in order.
-(8) Processing the video; does not seem to work on my local Jupyter/Conda install
+In my first round submission I got stuck several times because I wrote all project code in a single IPython notebook and multiple variables with duplicate names from different steps got held in memory that then screwed up code that I was runing in subsequent unrelated project steps.  In this submission, I decided to re-write my code so that different functions were held in separate python files to avoid such errors. I found an example online https://github.com/spadin/carnd-advanced-lane-lines which I referred to a few times that helped me do this; and also showed me how to write better Python code in a Object Orientated form and to do things like cacheing properties. I tried out and re-used sections of this for some of the trickier things like calculating polynomial best fit, lane curvatures and lane averaging etc....  
 
-After 4 or 5 days trying to get my own code running, I reference/re-used a lot of the code here:
+Otherwise, here are a few other comments.
 
-https://github.com/waterwheel31/SD_advanced_lane_finding/blob/master/Advanced_Lane_Line_Detection.ipynb
+(1) Re. processing images of roads with abrupt changes in direction, road surface, lighting conditions or obscured lane lines are  challenging for my pipeline code. Although it runs okay against the basic project_video.mp4.  However, it is not successful at processing the challenge_video.mp4 and harder_challenge_video.mp4.
+(2) Re. processing video. I could not get the MoviePY library to run with my local Jupyter/Conda install, although it does run successfully in the Udacity workspace.
+
 
 
