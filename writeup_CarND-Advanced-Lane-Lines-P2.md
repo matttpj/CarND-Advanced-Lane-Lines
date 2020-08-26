@@ -68,7 +68,7 @@ Here is an example of __test_images/straight_lines1.jpg__ undistorted by loading
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted __test_images__ are available here:* 
+*A full set of undistorted test_images are available here:* 
 **./output_images/undistort_*.jpg**
 <br/>
 
