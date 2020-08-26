@@ -62,7 +62,7 @@ Camera calibration is done by loading the calibration images at __camera_cal/cal
 
 The code for this step is in the second section of the IPython notebook __P2.ipynb__, __calibrate_camera.py__ and __distortion.py__ python file.
 
-Here is an example of __test_images/straight_lines.jpg__ undistorted by loading the Distortion class object and calling __undistort()__ method. Distortion class loads the camera calibration matrix and distortion coefficients from the pickle file as explained above.
+Here is an example of __test_images/straight_lines1.jpg__ undistorted by loading the Distortion class object and calling __undistort()__ method. Distortion class loads the camera calibration matrix and distortion coefficients from the pickle file as explained above.
 
 <br/>
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
