@@ -134,8 +134,7 @@ Then in **bestfit.py** for each lanes_image, wih PixelCalculation objects of the
 <img src="./output_images/lanes_00.jpg" width=40% height=40%>
 <br/>
 
-*A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and also available here:* 
-**./output_images/lanes_*.jpg**
+*A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and are also available here:* __./output_images/lanes_*.jpg__
 <br/>
 
 #### 6. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
