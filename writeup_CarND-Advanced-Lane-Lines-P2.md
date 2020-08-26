@@ -157,13 +157,13 @@ Assuming the camera is mounted in the center of the car, the vehicle offset posi
 Left lane curvature, right lane curvature and vehicle offset position from center were calculated. Examples for two test_images are shown here.
 <br/>
 | Test image: | ./test_images/straight_lines1.jpg |
-|:-----------:|:---------------------------------:|
-|Left curvature:  4103.6516 m |
-|Right curvature:  1287.9599 m |
-|Vehicle offset:  -0.1752 m |
+|:---:|:---:|
+|Left curvature: | 4103.6516 m |
+|Right curvature: | 1287.9599 m |
+|Vehicle offset: | -0.1752 m |
 <br/> 
 | Test image: | ./test_images/test6.jpg |
-|:-----------:|:-----------------------:|
+|:---:|:---:|
 | Left curvature: | 578.3859 m |
 | Right curvature: | 700.0287 m |
 | Vehicle offset: | 0.1307 m |
