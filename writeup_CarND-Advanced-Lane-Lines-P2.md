@@ -52,7 +52,7 @@ Camera calibration is done by loading the calibration images at __camera_cal/cal
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted camera calibration images are available here:* ./camera_cal/undistort*.jpg
+*A full set of undistorted camera calibration images are available here:* __./camera_cal/undistort*.jpg__
 <br/>
 
 
@@ -73,7 +73,7 @@ Here is an example of __test_images/straight_lines1.jpg__ undistorted by loading
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 The code for this step is in the third section of the IPython notebook __P2.ipynb__ and __combined_thresholds.py__ python file.
-This code applies multiple gradient and thresholding transformations to the test_images.  
+This code applies multiple gradient and thresholding transformations to the test_images.   
 
 __Sobel gradient thesholding in X and Y directions__  
 Sobel gradient thresholding was used to detect changes in pixel density in the horizontal and vertical directions. 
@@ -90,22 +90,21 @@ After converting the RGB image to the HLS colorspace, the Saturation channel is 
 __RGB - Red channel thresholding__  
 The red channel of the RGB image in BGR channel order is good at detecting white lines.  
 
-After experimenting with values and different combinations, the thresholding techniques were combined using OR operators on __Grad-X, Grad-Y, Saturation__ and __Red channel__ transforms. 
+After experimenting with values and different combinations, the thresholding techniques were combined using OR operators on __Grad-X, Grad-Y, Saturation__ and __Red channel__ transforms. Example results are shown below.
 <br/>
 <img src="./output_images/threshold_00.jpg" width=40% height=40%>
 <img src="./output_images/threshold_01.jpg" width=40% height=40%>
 <img src="./output_images/threshold_06.jpg" width=40% height=40%>
 <img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
-*A full set of threshold transformed test_images are available here:* 
-__./output_images/threshold_*.jpg__
+*A full set of threshold transformed test_images are available here:* __./output_images/threshold_*.jpg__
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
 The code for this step is in the fourth section of the IPython notebook __P2.ipynb__ and __birdseye.py__. 
 
-BirdsEyeView class includes methods to transform the perspective of any image to or from a birds-eye view using class methods that use __cv2.getPerspectiveTransform()__ and __cv2.warpPerspective()__. My perspective transform uses a hard coded set of polygon points from the straight line view of the road __./test_images/straight-line1.jpg__ to a top-down perspective birds-eye view. These points were then verified and adjusted after outputting the results to the screen.
+This code instantiates a BirdsEyeView object with methods **transform_to_birdseye()** and **transform_from_birdseye()** that transform the perspective of any image to or from birds-eye view by using _cv2.warpPerspective()_.  These perspective transforms use **transform_matrix()** and **inverse_transform_matrix()** methods created from a manually-defined set of source and destination polygon points and then using _cv2.getPerspectiveTransform()_ to define the actual tranformation in each direction. The source and destination points were defined by visually inspecting the initial straight line view of the road __./test_images/straight_lines1.jpg__ (which has a known perspective) and seeking to find source and destination points that transform it to a top-down view with nearly straight parallel lines. The results below show test_images transformed to birds-eye view using **birdseye.py** and then transformed using **combined_thresholds.py**.
 
 The following source and destination points were used to feed the transform methods.
 <br/>
@@ -119,7 +118,7 @@ The following source and destination points were used to feed the transform meth
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
 <br/>
-*A full set of birds-eye perspective transformed images are available here:* 
+*A full set of birds-eye perspective and threshold transformed images are available here:* 
 **./output_images/birdseye_threshold_*.jpg**
 <br/>
 
