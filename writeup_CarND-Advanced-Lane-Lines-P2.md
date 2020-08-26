@@ -52,7 +52,7 @@ Camera calibration is done by loading the calibration images at __camera_cal/cal
 <br/>
 <img src="./camera_cal/undistort20.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted camera calibration images are available here:* __./camera_cal/undistort\*.jpg__
+*A full set of undistorted camera calibration images are available here:* **./camera_cal/undistort\*.jpg**
 <br/>
 
 
@@ -67,7 +67,7 @@ Here is an example of __test_images/straight_lines1.jpg__ undistorted by loading
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/undistort_00.jpg" width=40% height=40%>
 <br/>
-*A full set of undistorted test_images are available here:* __./output_images/undistort_\*.jpg__
+*A full set of undistorted test_images are available here:* **./output_images/undistort_\*.jpg**
 <br/>
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
@@ -97,7 +97,7 @@ After experimenting with values and different combinations, the thresholding tec
 <img src="./output_images/threshold_06.jpg" width=40% height=40%>
 <img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
-*A full set of threshold transformed test_images are available here:* __./output_images/threshold_\*.jpg__
+*A full set of threshold transformed test_images are available here:* **./output_images/threshold_\*.jpg**
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
