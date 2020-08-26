@@ -46,7 +46,7 @@ The goals / steps of this project are the following:
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the first section of the IPython notebook __P2.ipynb__ and __calibrate_camera.py__ and __distortion.py__ python files. 
+The code for this step is contained in the first section of the IPython notebook __P2.ipynb__ and __calibrate_camera.py__ and __distortion.py__. 
 
 Camera calibration is done by loading the calibration images at __camera_cal/calibrate*.jpg__ and running grayscale versions through _cv2.findChessboardCorners()_. Corners are drawn on these images using _cv2.drawChessboardCorners()_ and saved as output to __camera_cal/corners*.jpg__.  *objpoints* and *imgpoints* arrays are passed to _cv2.calibrateCamera()_ which returns the distortion coefficients and matrix needed to undistort the image.  Distortion matrix and coefficients are stored in a pickle file so that they can be re-used throughout the project to undistort images. This is done by instantiating a __Distortion__ object from the the pickle file and calling __undistort()__ which uses _cv2.undistort()_ to undistort the image. An example camera calibration chessboard image that have been undistorted by loading the Distortion object and calling __undistort()__ is shown below. 
 <br/>
@@ -60,7 +60,7 @@ Camera calibration is done by loading the calibration images at __camera_cal/cal
 
 #### 2. Provide an example of a distortion-corrected image.
 
-The code for this step is in the second section of the IPython notebook __P2.ipynb__, __calibrate_camera.py__ and __distortion.py__ python file.
+The code for this step is in the second section of the IPython notebook __P2.ipynb__, __calibrate_camera.py__ and __distortion.py__.
 
 Here is an example of __test_images/straight_lines1.jpg__ undistorted by loading the Distortion class object and calling __undistort()__ method. Distortion class loads the camera calibration matrix and distortion coefficients from the pickle file as explained above.
 <br/>
@@ -72,7 +72,7 @@ Here is an example of __test_images/straight_lines1.jpg__ undistorted by loading
 
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-The code for this step is in the third section of the IPython notebook __P2.ipynb__ and __combined_thresholds.py__ python file.
+The code for this step is in the third section of the IPython notebook __P2.ipynb__ and __combined_thresholds.py__.
 This code applies multiple gradient and thresholding transformations to the test_images.   
 
 __Sobel gradient thesholding in X and Y directions__  
@@ -118,12 +118,12 @@ The following source and destination points were used to feed the transform meth
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
 <img src="./output_images/birdseye_threshold_00.jpg" width=40% height=40%>
 <br/>
-*A full set of birds-eye perspective and threshold transformed images are available here:* __./output_images/birdseye_threshold_*.jpg__
+*A full set of birds-eye perspective and threshold transformed images are available here:* **./output_images/birdseye_threshold_\*.jpg**
 <br/>
 
 #### 5. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-The code for this step is in the fifth section of the IPython notebook __P2.ipynb__ and __detect.py__ ,__lanes.py__, __lane.py__ , __bestfit.py__ python files. 
+The code for this step is in the fifth section of the IPython notebook __P2.ipynb__ and __detect.py__ ,__lanes.py__, __lane.py__ , __bestfit.py__. 
 This step begins with an image that has already been undistorted and transformed using combined threshold and birds-eye perspective functions.
 
 In **detect.py** lower half of the image is selected and a histogram analysis is performed on the  left to right view to find peaks of active (white) pixel destiny. Mid-points of the left and right sides of the image are marked as starting points then a series of small windows are drawn from bottom to top of image with a boundary line. For every window, active (white) pixels are identified and added to the lists of left-side and right-side pixels and then the next window is scanned for pixels. If the length of the left-side and right-side pixel arrays are above a minimum then the window is re-centered on their current positions. And then the active pixels are added to the left-side and right-side lists. The lists of left-side and right-side pixels are used to instantiate left-side and right-side Lane objects (and a Lanes object) which are cached for subsequent usage. 
@@ -133,30 +133,53 @@ Then in **bestfit.py** for each lanes_image, wih PixelCalculation objects of the
 <img src="./output_images/windows_00.jpg" width=40% height=40%>
 <img src="./output_images/lanes_00.jpg" width=40% height=40%>
 <br/>
-
-*A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and are also available here:* __./output_images/lanes_*.jpg__
+*A full set of images with lane pixels identifed and best-fit line are shown in the P2.ipynb notebook and are also available here:* **./output_images/lanes_\*.jpg**
 <br/>
 
 #### 6. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-The code for this step is in the sixth section of the IPython notebook "P2.ipynb". 
-The warped images are passed to function measure_curvature_real() which in turn calls fit_polynomial() and returns the lists of left-side and right-side pixels which are used to calculate the curvature in metres and the vehicle bias.
+The code for this step is in the sixth section of the IPython notebook __P2.ipynb__ and __detect.py__, __lanes.py__, __lane.py__, __lanes_average.py__. 
+__Lane curvature__  
+Lane curvature is determined using the following curvature formula: 
 
-output_images/warped_00.jpg
-Left:  9072.60 m   Right:  13933.05 m
-Vehicle Bias:  0.0370 
+fit = np.polyfit(xs, ys) # using the xs and ys found during detection  
+p   = np.poly1d(fit)     # polynomial helper function  
+p1  = np.polyder(p)      # first derivative of our polynomial  
+p2  = np.polyder(p, 2)   # second derivative of our polynomial  
 
-<img src="./output_images/warped+lanes_00.jpg" width=40% height=40%>
-<img src="./output_images/warped+lanes_01.jpg" width=40% height=40%>
+y is the point at which you'd like to find the curvature   
+__((1 + (p1(y)*2))*1.5) / np.absolute(p2(y))__  
+These calculations are performed inside lane.py.  
+
+__Vehicle offset position__  
+Assuming the camera is mounted in the center of the car, the vehicle offset position can be calculated by measuring the distance from the center of the lane to the center of the image.
+
+Left lane curvature, right lane curvature and vehicle offset position from center were calculated. Examples for two test_images are shown here.
+<br/>
+Test image:  ./test_images/straight_lines1.jpg
+Left curvature:  4103.6516 m
+Right curvature:  1287.9599 m
+Vehicle offset:  -0.1752 m 
+<br/> 
+Test image:  ./test_images/test6.jpg
+Left curvature:  578.3859 m
+Right curvature:  700.0287 m
+Vehicle offset:  0.1307 m 
+<br/> 
+*A full set of lane curvature and vehicle offset calculations are shown in the P2.ipynb notebook.
 
 #### 7. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-The code for this step is in the seventh section of the IPython notebook "P2.ipynb". 
+The code for this step is in the seventh section of the IPython notebook __P2.ipynb__ and __pipeline.py, __overlay.py__. 
 
-Function overlay() takes the lists of pixels that fit the left-side and right-side curvature lines, plots them back on the undistorted images and prints the curvatures and vehicle bias. Here is an example of my results on a test image:
-<img src="./output_images/overlay_00.jpg.jpg" width=40% height=40%>
-<img src="./output_images/overlay_01.jpg" width=40% height=40%>
+**pipeline.py** combines all the steps described above and then calls **overlay.py** to overlay a polygon marking the lane and to overlay text which shows the left and right lane curvatures and vehicle offset from the centre of the lane.
 
+Here is an example of my results on a test image:
+<img src="./output_images/final_00.jpg" width=40% height=40%>
+<img src="./output_images/final_07.jpg" width=40% height=40%>
+<br/>
+*A full set of test_images with lane overlays plus left and right lane curvature and vehicle offset are shown in P2.ipynb notebook and are also available here:* **./output_images/final_\*.jpg**
+<br/>
 ---
 
 ### Pipeline (video)
