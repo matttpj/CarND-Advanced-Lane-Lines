@@ -110,9 +110,9 @@ The following source and destination points were used to feed the transform meth
 <br/>
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 600, 450      | 200, 0        | 
-| 700, 450      | 1000, 0       |
-| 1020, 660     | 1020, 660     |
+| 600, 450      | 210, 0        | 
+| 700, 450      | 1020, 0       |
+| 1020, 720     | 1020, 720     |
 | 210, 720      | 210, 720      |
 <br/>
 <img src="./test_images/straight_lines1.jpg" width=40% height=40%>
