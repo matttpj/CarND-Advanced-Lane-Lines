@@ -191,7 +191,9 @@ Here is an example of my results on test_images __straight_lines1.jpg__ and __te
 
 #### 8. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-The code for this step is in the eighth section of the IPython notebook "P2.ipynb". 
+The code for this step is in the eighth section of the IPython notebook "P2.ipynb" and __pipeline.py__, __process_video.py__. 
+
+**process_video.py** uses the MoviePY library. Each image in the video is called by **pipeline.process_image_pipeline()** method and then re-combined to produce a new video.
 Here's a link to my video result. ./output_videos/ALL_project_video.mp4
 https://github.com/matttpj/CarND-Advanced-Lane-Lines/blob/master/output_videos/ALL_project_video.mp4
 <br/>
