@@ -3,7 +3,7 @@ from pipeline import Pipeline
 import numpy as np
 
 clip1 = VideoFileClip('project_video.mp4')
-video_output = './output_videos/project_video.mp4'
+video_output = './output_videos/ALL_project_video.mp4'
 
 def process_video_pipeline(clip1):
     white_clip = clip1.fl_image(pipeline.process_image_pipeline).subclip(0,5) #NOTE: this function expects color images!!
