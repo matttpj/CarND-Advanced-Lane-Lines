@@ -73,7 +73,24 @@ Here is an example of __test_images/straight_lines1.jpg__ undistorted by loading
 #### 3. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 The code for this step is in the third section of the IPython notebook __P2.ipynb__ and __combined_thresholds.py__ python file.
-A combination of gradient threshold and color threshold functions were applied to generate a binary image in which lines could be more easily identified. A combination of transforms were made using absolute Sobel gradient threshold on the X and Y gradients, Saturation threshold on the S channel of HLS colorspace and  Red threshold on the R channel or RGB colorspace. Through experimentation Magnitude and Direction gradient threshold transforms were found to be ineffective. Here are some examples of my output from this step. 
+This code applies multiple gradient and thresholding transformations to the test_images.  
+
+__Sobel gradient thesholding in X and Y directions__  
+Sobel gradient thresholding was used to detect changes in pixel density in the horizontal and vertical directions. 
+
+__Sobel gradient magnitude thresholding__  
+This was not used in the submitted version as it did not offer any additional clarity over X and Y gradient thresholding.
+
+__Sobel gradient direction thresholding__  
+This was not used in the submitted version as it seemed to add a lot of additional noise in the image background.
+
+__HLS - Saturation channel thresholding__  
+After converting the RGB image to the HLS colorspace, the Saturation channel is good at detecting yellow lines.  
+
+__RGB - Red channel thresholding__  
+The red channel of the RGB image in BGR channel order is good at detecting white lines.  
+
+After experimenting with values and different combinations, the thresholding techniques were combined using OR operators on __Grad-X, Grad-Y, Saturation__ and __Red channel__ transforms. 
 <br/>
 <img src="./output_images/threshold_00.jpg" width=40% height=40%>
 <img src="./output_images/threshold_01.jpg" width=40% height=40%>
@@ -81,7 +98,7 @@ A combination of gradient threshold and color threshold functions were applied t
 <img src="./output_images/threshold_07.jpg" width=40% height=40%>
 <br/>
 *A full set of threshold transformed test_images are available here:* 
-**./output_images/threshold_*.jpg**
+__./output_images/threshold_*.jpg__
 <br/>
 
 #### 4. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
