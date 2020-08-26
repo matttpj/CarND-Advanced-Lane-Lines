@@ -156,15 +156,17 @@ Assuming the camera is mounted in the center of the car, the vehicle offset posi
 
 Left lane curvature, right lane curvature and vehicle offset position from center were calculated. Examples for two test_images are shown here.
 <br/>
-Test image:  ./test_images/straight_lines1.jpg
-Left curvature:  4103.6516 m
-Right curvature:  1287.9599 m
-Vehicle offset:  -0.1752 m 
+| Test image: | ./test_images/straight_lines1.jpg |
+|---|---|
+|Left curvature:  4103.6516 m |
+|Right curvature:  1287.9599 m |
+|Vehicle offset:  -0.1752 m |
 <br/> 
-Test image:  ./test_images/test6.jpg
-Left curvature:  578.3859 m
-Right curvature:  700.0287 m
-Vehicle offset:  0.1307 m 
+| Test image: | ./test_images/test6.jpg |
+|---|---|
+| Left curvature: | 578.3859 m |
+| Right curvature: | 700.0287 m |
+| Vehicle offset: | 0.1307 m |
 <br/> 
 *A full set of lane curvature and vehicle offset calculations are shown in the P2.ipynb notebook.
 
@@ -174,7 +176,7 @@ The code for this step is in the seventh section of the IPython notebook __P2.ip
 
 **pipeline.py** combines all the steps described above and then calls **overlay.py** to overlay a polygon marking the lane and to overlay text which shows the left and right lane curvatures and vehicle offset from the centre of the lane.
 
-Here is an example of my results on a test image:
+Here is an example of my results on test_images *straight_lines1.jpg* and *test6.jpg*:
 <br/>
 <img src="./output_images/final_00.jpg" width=40% height=40%>
 <img src="./output_images/final_07.jpg" width=40% height=40%>
