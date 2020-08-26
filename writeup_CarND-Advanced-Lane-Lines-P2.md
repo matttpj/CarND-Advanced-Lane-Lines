@@ -154,7 +154,7 @@ These calculations are performed inside lane.py.
 __Vehicle offset position__  
 Assuming the camera is mounted in the center of the car, the vehicle offset position can be calculated by measuring the distance from the center of the lane to the center of the image.
 
-Left lane curvature, right lane curvature and vehicle offset position from center were calculated. Examples for two test_images are shown here.
+Left lane curvature, right lane curvature and vehicle offset position from center were calculated. Examples for two test_images are shown below.
 <br/>
 | Test image: | ./test_images/straight_lines1.jpg |
 |:---:|:---:|
@@ -168,11 +168,6 @@ Left lane curvature, right lane curvature and vehicle offset position from cente
 |Right curvature: | 700.0287 m |
 |Vehicle offset: | 0.1307 m |
 
-| Test image: | ./test_images/test6.jpg |
-|:---:|:---:|
-| Left curvature: | 578.3859 m |
-| Right curvature: | 700.0287 m |
-| Vehicle offset: | 0.1307 m |
 <br/>
 *A full set of lane curvature and vehicle offset calculations are shown in the P2.ipynb notebook.*
 
@@ -197,7 +192,9 @@ Here is an example of my results on test_images __straight_lines1.jpg__ and __te
 #### 8. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 The code for this step is in the eighth section of the IPython notebook "P2.ipynb". 
-Here's a link to my video result. (./output_videos/ALL_project_video.mp4)
+Here's a link to my video result. ./output_videos/ALL_project_video.mp4
+https://github.com/matttpj/CarND-Advanced-Lane-Lines/blob/master/output_videos/ALL_project_video.mp4
+<br/>
 
 ---
 
