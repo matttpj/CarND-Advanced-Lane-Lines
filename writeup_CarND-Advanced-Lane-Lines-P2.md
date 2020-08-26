@@ -170,16 +170,18 @@ Vehicle offset:  0.1307 m
 
 #### 7. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-The code for this step is in the seventh section of the IPython notebook __P2.ipynb__ and __pipeline.py, __overlay.py__. 
+The code for this step is in the seventh section of the IPython notebook __P2.ipynb__ and __pipeline.py__, __overlay.py__. 
 
 **pipeline.py** combines all the steps described above and then calls **overlay.py** to overlay a polygon marking the lane and to overlay text which shows the left and right lane curvatures and vehicle offset from the centre of the lane.
 
 Here is an example of my results on a test image:
+<br/>
 <img src="./output_images/final_00.jpg" width=40% height=40%>
 <img src="./output_images/final_07.jpg" width=40% height=40%>
 <br/>
 *A full set of test_images with lane overlays plus left and right lane curvature and vehicle offset are shown in P2.ipynb notebook and are also available here:* **./output_images/final_\*.jpg**
 <br/>
+
 ---
 
 ### Pipeline (video)
@@ -187,7 +189,7 @@ Here is an example of my results on a test image:
 #### 8. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 The code for this step is in the eighth section of the IPython notebook "P2.ipynb". 
-Here's a [link to my video result](./project_video.mp4)
+Here's a link to my video result. (./output_videos/ALL_project_video.mp4)
 
 ---
 
