@@ -161,6 +161,12 @@ Left lane curvature, right lane curvature and vehicle offset position from cente
 |Left curvature: | 4103.6516 m |
 |Right curvature: | 1287.9599 m |
 |Vehicle offset: | -0.1752 m |
+<br/>
+| Test image: | ./test_images/test6.jpg |
+|:---:|:---:|
+|Left curvature: | 578.3859 m |
+|Right curvature: | 700.0287 m |
+|Vehicle offset: | 0.1307 m |
 <br/> 
 | Test image: | ./test_images/test6.jpg |
 |:---:|:---:|
